@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/normaliz.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./icon/compaq.svg" />
+    <title>Compaq</title>
+  </head>
+  <body
+    class="d-flex justify-content-center align-items-lg-center vh-100 vw-100"
+  >
+    <div class="loader"></div>
+    <!-- login 1 Start -->
+    <div class="content d-flex">
+      <div class="img-box d-flex flex-column">
+        <h2 class="fs-1 text-white">Compaq</h2>
+        <ul class="d-flex text-white">
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-google"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </li>
+        </ul>
+      </div>
+      <form class="d-flex flex-column" action="#">
+        <div class="shap"></div>
+        <h2 class="text-center fs-3">Sign into your account</h2>
+        <div class="button-log-reg d-flex" id="button-log">
+          <a href="login-1.html" class="active" id="button-log">Login</a>
+          <a href="register-1.html" class="button-log" id="button-log"
+            >Register</a
+          >
+        </div>
+        <div class="login-form d-flex flex-column">
+          <input type="text" id="user-name" placeholder="Username" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="password"
+            required
+          />
+        </div>
+        <div
+          class="remember-forget d-flex justify-content-between align-items-lg-start"
+        >
+          <div class="remember d-flex align-items-lg-center">
+            <div class="checkbox-buttom">
+              <input type="checkbox" id="remember" checked />
+              <label for="remember"></label>
+            </div>
+            <p>Remember me</p>
+          </div>
+
+          <a href="#">Forget Password ?</a>
+        </div>
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+    <!-- login 1 end -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

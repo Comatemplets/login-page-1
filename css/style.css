@@ -1,0 +1,260 @@
+:root {
+  --main-color: #ff451c;
+  --main-transition: 0.5s;
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  position: relative;
+  font-family: "Comfortaa", cursive;
+  overflow: hidden;
+}
+body .shap {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  right: -58px;
+  top: -58px;
+}
+/* start loader  */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: 0.75s;
+  z-index: 10000;
+}
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader::before {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 10px dotted #eee;
+  border-top-color: var(--main-color);
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+/* End loader  */
+
+/* checkbox button start*/
+.checkbox-buttom {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+.checkbox-buttom input {
+  display: none;
+}
+.checkbox-buttom label {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.checkbox-buttom label::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00c";
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: white;
+  background-color: var(--main-color);
+  opacity: 0;
+  transform: scale(0);
+  transition: var(--main-transition);
+  border-radius: 3px;
+}
+.checkbox-buttom input:checked + label::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/* checkbox button end */
+/* formats login page and register page  */
+/* Content-box start */
+.content {
+  position: relative;
+  background-color: white;
+  width: 1000px;
+  height: 600px;
+  border-radius: 20px;
+  margin: 50px;
+  box-shadow: 0 0 35px rgb(0 0 0 / 10%);
+  overflow: hidden;
+}
+
+.content .img-box {
+  background-image: url(../img/imgBox.jpg);
+  background-size: cover;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+}
+.content .img-box h2 {
+  font-weight: bolder;
+}
+.content .img-box ul {
+  gap: 20px;
+  padding: 0;
+  justify-content: space-between;
+}
+.content .img-box ul a {
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+.content .img-box ul a:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.content form {
+  padding: 70px 20px;
+  flex: 1;
+  gap: 10px;
+}
+.content form h2 {
+  z-index: 2;
+}
+.content form .button-log-reg {
+  margin: 30px auto;
+}
+.content form .button-log-reg a {
+  display: inline-block;
+  background-color: white;
+  padding: 10px 15px;
+  color: gray;
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+  margin-right: 2px;
+  transition: var(--main-transition);
+}
+.content form .button-log-reg a:hover,
+.content form .button-log-reg a.active {
+  color: var(--main-color);
+}
+.content form .button-log-reg a:first-of-type {
+  border-radius: 30px 0 0 30px;
+}
+.content form .button-log-reg a:last-of-type {
+  border-radius: 0 30px 30px 0;
+}
+
+.content form input[type="text"],
+.content form input[type="password"],
+.content form input[type="email"] {
+  position: relative;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+  outline: none;
+}
+.content form input[type="text"]:focus::placeholder,
+.content form input[type="password"]:focus::placeholder {
+  opacity: 0;
+  transition: var(--main-transition);
+}
+
+.content form .remember-forget {
+  flex: 1;
+  height: fit-content;
+  margin-bottom: 10px;
+}
+.content form .remember-forget .remember p {
+  margin: 0;
+  color: gray;
+  font-size: 14px;
+}
+.content form .remember-forget a {
+  color: gray;
+  font-size: 14px;
+  margin-left: 3px;
+}
+.content form .remember-forget a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+.content form input[type="submit"] {
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bolder;
+  outline: none;
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  transition: var(--main-transition);
+}
+.content form input[type="submit"]:hover {
+  background-color: black;
+}
+@media (max-width: 767px) {
+  body {
+    justify-content: center;
+    align-items: center;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .content form {
+    padding: 30px 30px;
+  }
+  .content form .log-reg-form {
+    margin-bottom: 0;
+  }
+  .content form .button-log-reg {
+    margin: 20px auto;
+  }
+  .content .shap {
+    display: none;
+  }
+}
+/* content-box end  */
+/* Animation start */
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Animation end  */
